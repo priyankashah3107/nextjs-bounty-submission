@@ -24,7 +24,6 @@ export function LoginCTAButton() {
     <ExternalNavigationCTAButton
       isLoading={isFetching}
       isLoggedIn={isLoggedIn}
-      
     />
   );
 }

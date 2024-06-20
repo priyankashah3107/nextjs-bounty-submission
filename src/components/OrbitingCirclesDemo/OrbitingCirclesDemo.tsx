@@ -1,12 +1,17 @@
-import OrbitingCircles from "@/components/magicui/orbiting-circles";
-import Image from "next/image";
+import OrbitingCircles from '@/components/magicui/orbiting-circles';
+import Image from 'next/image';
 
 export function OrbitingCirclesDemo() {
   return (
     <div className="relative flex h-[500px] w-full max-w-[32rem] items-center justify-center overflow-hidden rounded-lg  bg-background ">
       <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
         {/* Circles */}
-        <Image src={"/logos/logo-black.png"} alt="img" width={"50"} height={"50"} />
+        <Image
+          src={'/logos/logo-black.png'}
+          alt="img"
+          width={'50'}
+          height={'50'}
+        />
       </span>
 
       {/* Inner Circles */}

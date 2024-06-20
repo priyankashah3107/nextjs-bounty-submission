@@ -74,47 +74,43 @@
   @apply max-w-[720px] mx-auto;
 }
 
-.para{
-  color: #64748B;
+.para {
+  color: #64748b;
 }
 
-.paraB{
-  color: #94A3B8;
+.paraB {
+  color: #94a3b8;
 }
 
-.logoCol{
-  color: #0F172A;
+.logoCol {
+  color: #0f172a;
 }
 
 @keyframes slide {
-  from{
-      transform: translateX(0);
+  from {
+    transform: translateX(0);
   }
 
   to {
-      transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 }
 
-.logos{
-  overflow: hidden; 
+.logos {
+  overflow: hidden;
   padding: 60px 0px;
-  
-  white-space: nowrap;
-  
 
+  white-space: nowrap;
 }
 
 .logos:hover .logoslide {
   animation-play-state: paused;
 }
 
-.logoslide{
-  
+.logoslide {
   display: inline-flex;
   justify-content: space-evenly;
   animation: 16s slide infinite linear;
-  
 }
 
 .logoslide img {

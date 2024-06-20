@@ -3,11 +3,15 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion"
+} from '@/components/ui/accordion';
 
 export function AccordionFAQ() {
   return (
-    <Accordion type="single" collapsible className="w-full p-6 pt-0  md:p-0  md:w-1/2">
+    <Accordion
+      type="single"
+      collapsible
+      className="w-full p-6 pt-0  md:p-0  md:w-1/2"
+    >
       <AccordionItem value="item-1">
         <AccordionTrigger>Is it accessible?</AccordionTrigger>
         <AccordionContent>
@@ -29,5 +33,5 @@ export function AccordionFAQ() {
         </AccordionContent>
       </AccordionItem>
     </Accordion>
-  )
+  );
 }

@@ -13,8 +13,6 @@
 11. `pnpm tsc` should not throw any errors
 12. `pnpm lint` should not throw any errors
 
-
-
 ## Acceptance rules
 
 1. As close to pixel perfection as possible
@@ -30,11 +28,13 @@ To set up the project, follow these steps:
 
 1. **Install Dependencies**:
    Ensure you have `pnpm` installed. If not, you can install it globally using npm:
+
    ```sh
    npm install -g pnpm
    ```
 
    Once `pnpm` is installed, navigate to your project directory and run:
+
    ```sh
    pnpm install
    ```
@@ -43,6 +43,7 @@ To set up the project, follow these steps:
 
 2. **Run the Development Server**:
    After the dependencies are installed, you can start the development server by running:
+
    ```sh
    pnpm dev
    ```
@@ -51,6 +52,7 @@ To set up the project, follow these steps:
 
 3. **Build for Production**:
    If you need to build the project for production, you can run:
+
    ```sh
    pnpm build
    ```

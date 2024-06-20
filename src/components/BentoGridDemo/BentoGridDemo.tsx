@@ -1,4 +1,4 @@
-import { Calendar } from "@/components/ui/calendar";
+import { Calendar } from '@/components/ui/calendar';
 import {
   Command,
   CommandEmpty,
@@ -6,16 +6,13 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/components/ui/command";
-import { cn } from "@/lib/utils";
-import {AnimatedBeamMultipleOutputDemo} from "@/components/example/animated-beam-multiple-outputs";
-import { BentoCard, BentoGrid } from "@/components/magicui/bento-grid";
-import Marquee from "@/components/magicui/marquee";
-import { CalendarIcon, FileTextIcon, InputIcon } from "@radix-ui/react-icons";
-import { Share2Icon } from "lucide-react";
-import { GlobeDemo } from "../GlobeDemo/GlobeDemo";
-
-
+} from '@/components/ui/command';
+import { cn } from '@/lib/utils';
+import { AnimatedBeamMultipleOutputDemo } from '@/components/example/animated-beam-multiple-outputs';
+import { BentoCard, BentoGrid } from '@/components/magicui/bento-grid';
+import Marquee from '@/components/magicui/marquee';
+import { CalendarIcon, FileTextIcon, InputIcon } from '@radix-ui/react-icons';
+import { Share2Icon } from 'lucide-react';
 
 
 interface Item {
@@ -28,60 +25,58 @@ interface Item {
 
 let notifications = [
   {
-    name: "Payment received",
-    description: "Magic UI",
-    time: "15m ago",
+    name: 'Payment received',
+    description: 'Magic UI',
+    time: '15m ago',
 
-    icon: "💸",
-    color: "#00C9A7",
+    icon: '💸',
+    color: '#00C9A7',
   },
   {
-    name: "User signed up",
-    description: "Magic UI",
-    time: "10m ago",
-    icon: "👤",
-    color: "#FFB800",
+    name: 'User signed up',
+    description: 'Magic UI',
+    time: '10m ago',
+    icon: '👤',
+    color: '#FFB800',
   },
   {
-    name: "New message",
-    description: "Magic UI",
-    time: "5m ago",
-    icon: "💬",
-    color: "#FF3D71",
+    name: 'New message',
+    description: 'Magic UI',
+    time: '5m ago',
+    icon: '💬',
+    color: '#FF3D71',
   },
   {
-    name: "New event",
-    description: "Magic UI",
-    time: "2m ago",
-    icon: "🗞️",
-    color: "#1E86FF",
+    name: 'New event',
+    description: 'Magic UI',
+    time: '2m ago',
+    icon: '🗞️',
+    color: '#1E86FF',
   },
 ];
 
 const files = [
   {
-    name: "bitcoin.pdf",
-    body: "Bitcoin is a cryptocurrency invented in 2008 by an unknown person or group of people using the name Satoshi Nakamoto.",
+    name: 'bitcoin.pdf',
+    body: 'Bitcoin is a cryptocurrency invented in 2008 by an unknown person or group of people using the name Satoshi Nakamoto.',
   },
   {
-    name: "finances.xlsx",
-    body: "A spreadsheet or worksheet is a file made of rows and columns that help sort data, arrange data easily, and calculate numerical data.",
+    name: 'finances.xlsx',
+    body: 'A spreadsheet or worksheet is a file made of rows and columns that help sort data, arrange data easily, and calculate numerical data.',
   },
   {
-    name: "logo.svg",
-    body: "Scalable Vector Graphics is an Extensible Markup Language-based vector image format for two-dimensional graphics with support for interactivity and animation.",
+    name: 'logo.svg',
+    body: 'Scalable Vector Graphics is an Extensible Markup Language-based vector image format for two-dimensional graphics with support for interactivity and animation.',
   },
   {
-    name: "keys.gpg",
-    body: "GPG keys are used to encrypt and decrypt email, files, directories, and whole disk partitions and to authenticate messages.",
+    name: 'keys.gpg',
+    body: 'GPG keys are used to encrypt and decrypt email, files, directories, and whole disk partitions and to authenticate messages.',
   },
   {
-    name: "seed.txt",
-    body: "A seed phrase, seed recovery phrase or backup seed phrase is a list of words which store all the information needed to recover Bitcoin funds on-chain.",
+    name: 'seed.txt',
+    body: 'A seed phrase, seed recovery phrase or backup seed phrase is a list of words which store all the information needed to recover Bitcoin funds on-chain.',
   },
 ];
-
-
 
 notifications = Array.from({ length: 10 }, () => notifications).flat();
 
@@ -89,13 +84,13 @@ const Notification = ({ name, description, icon, color, time }: Item) => {
   return (
     <figure
       className={cn(
-        "relative mx-auto min-h-fit w-full max-w-[400px] transform cursor-pointer overflow-hidden rounded-2xl p-4",
+        'relative mx-auto min-h-fit w-full max-w-[400px] transform cursor-pointer overflow-hidden rounded-2xl p-4',
         // animation styles
-        "transition-all duration-200 ease-in-out hover:scale-[103%]",
+        'transition-all duration-200 ease-in-out hover:scale-[103%]',
         // light styles
-        "bg-white [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
+        'bg-white [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]',
         // dark styles
-        "transform-gpu dark:bg-transparent dark:backdrop-blur-md dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]",
+        'transform-gpu dark:bg-transparent dark:backdrop-blur-md dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]',
       )}
     >
       <div className="flex flex-row items-center gap-3">
@@ -123,14 +118,13 @@ const Notification = ({ name, description, icon, color, time }: Item) => {
 };
 
 const features = [
-     
   {
     Icon: InputIcon,
-    name: "Full text search",
-    description: "Search through all your files in one place.",
-    href: "/",
-    cta: "Learn more",
-    className: "col-span-3 lg:col-span-2",
+    name: 'Full text search',
+    description: 'Search through all your files in one place.',
+    href: '/',
+    cta: 'Learn more',
+    className: 'col-span-3 lg:col-span-2',
     background: (
       <Command className="absolute right-10 top-10 w-[40%] origin-top translate-x-0 border transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)] group-hover:-translate-x-10">
         <CommandInput placeholder="Type a command or search..." />
@@ -148,14 +142,14 @@ const features = [
       </Command>
     ),
   },
-  
+
   {
     Icon: Share2Icon,
-    name: "Integrations",
-    description: "Supports 100+ integrations and counting.",
-    href: "/",
-    cta: "Learn more",
-    className: "col-span-3 lg:col-span-2",
+    name: 'Integrations',
+    description: 'Supports 100+ integrations and counting.',
+    href: '/',
+    cta: 'Learn more',
+    className: 'col-span-3 lg:col-span-2',
     background: (
       <AnimatedBeamMultipleOutputDemo className="absolute right-2 top-4 h-[300px] w-[500px] border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-105" />
     ),
@@ -163,11 +157,11 @@ const features = [
 
   {
     Icon: FileTextIcon,
-    name: "Save your files",
-    description: "We automatically save your files as you type.",
-    href: "/",
-    cta: "Learn more",
-    className: "col-span-3 lg:col-span-1",
+    name: 'Save your files',
+    description: 'We automatically save your files as you type.',
+    href: '/',
+    cta: 'Learn more',
+    className: 'col-span-3 lg:col-span-1',
     background: (
       <Marquee
         pauseOnHover
@@ -177,10 +171,10 @@ const features = [
           <figure
             key={idx}
             className={cn(
-              "relative w-32 cursor-pointer overflow-hidden rounded-xl border p-4",
-              "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
-              "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
-              "transform-gpu blur-[1px] transition-all duration-300 ease-out hover:blur-none",
+              'relative w-32 cursor-pointer overflow-hidden rounded-xl border p-4',
+              'border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]',
+              'dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]',
+              'transform-gpu blur-[1px] transition-all duration-300 ease-out hover:blur-none',
             )}
           >
             <div className="flex flex-row items-center gap-2">
@@ -197,16 +191,15 @@ const features = [
     ),
   },
 
-
-    // card1 
-    //  Bento hai
+  // card1
+  //  Bento hai
   {
     Icon: CalendarIcon,
-    name: "Calendar",
-    description: "Use the calendar to filter your files by date.",
-    className: "col-span-3 lg:col-span-1",
-    href: "/",
-    cta: "Learn more",
+    name: 'Calendar',
+    description: 'Use the calendar to filter your files by date.',
+    className: 'col-span-3 lg:col-span-1',
+    href: '/',
+    cta: 'Learn more',
     background: (
       <Calendar
         mode="single"
@@ -215,23 +208,18 @@ const features = [
       />
     ),
   },
-
-  
 ];
-
-
 
 export function BentoDemo() {
   return (
-    <> 
-    <div className="flex  flex-col  md:flex-row">
-    <BentoGrid>
-      {features.map((feature, idx) => (
-        <BentoCard key={idx} {...feature} />
-      ))}
-    </BentoGrid>
-    
-    </div>
+    <>
+      <div className="flex  flex-col  md:flex-row">
+        <BentoGrid>
+          {features.map((feature, idx) => (
+            <BentoCard key={idx} {...feature} />
+          ))}
+        </BentoGrid>
+      </div>
     </>
   );
 }
