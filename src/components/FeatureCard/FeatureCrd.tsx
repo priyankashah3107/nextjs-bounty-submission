@@ -21,8 +21,9 @@ const FeatureCrd = () => {
         </P>
       </div>
 
-      <div>
+      <div className='flex flex-row'>
         <BentoDemo />
+        <GlobeDemo />
       </div>
     </div>
   );

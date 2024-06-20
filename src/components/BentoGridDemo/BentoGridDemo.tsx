@@ -230,7 +230,7 @@ export function BentoDemo() {
         <BentoCard key={idx} {...feature} />
       ))}
     </BentoGrid>
-    <GlobeDemo />
+    
     </div>
     </>
   );
