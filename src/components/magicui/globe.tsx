@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { cn } from '@/lib/utils';
-import createGlobe, { COBEOptions } from 'cobe';
-import { useCallback, useEffect, useRef } from 'react';
-import { useSpring } from 'react-spring';
+import { cn } from "@/lib/utils";
+import createGlobe, { COBEOptions } from "cobe";
+import { useCallback, useEffect, useRef } from "react";
+import { useSpring } from "react-spring";
 
 const GLOBE_CONFIG: COBEOptions = {
   width: 800,
@@ -43,7 +43,7 @@ export default function Globe({
   let phi = 0;
   let width = 0;
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const pointerInteracting = useRef<number | null>(null);
+  const pointerInteracting = useRef(null);
   const pointerInteractionMovement = useRef(0);
   const [{ r }, api] = useSpring(() => ({
     r: 0,
@@ -55,14 +55,12 @@ export default function Globe({
     },
   }));
 
-  const updatePointerInteraction = (value: number | null) => {
+  const updatePointerInteraction = (value: any) => {
     pointerInteracting.current = value;
-    if (canvasRef.current) {
-      canvasRef.current.style.cursor = value ? 'grabbing' : 'grab';
-    }
+    canvasRef.current!.style.cursor = value ? "grabbing" : "grab";
   };
 
-  const updateMovement = (clientX: number) => {
+  const updateMovement = (clientX: any) => {
     if (pointerInteracting.current !== null) {
       const delta = clientX - pointerInteracting.current;
       pointerInteractionMovement.current = delta;
@@ -71,7 +69,7 @@ export default function Globe({
   };
 
   const onRender = useCallback(
-    (state: Record<string, number>) => {
+    (state: Record<string, any>) => {
       if (!pointerInteracting.current) phi += 0.005;
       state.phi = phi + r.get();
       state.width = width * 2;
@@ -87,38 +85,30 @@ export default function Globe({
   };
 
   useEffect(() => {
-    window.addEventListener('resize', onResize);
+    window.addEventListener("resize", onResize);
     onResize();
 
-    const canvas = canvasRef.current;
-    if (canvas) {
-      const globe = createGlobe(canvas, {
-        ...config,
-        width: width * 2,
-        height: width * 2,
-        onRender,
-      });
+    const globe = createGlobe(canvasRef.current!, {
+      ...config,
+      width: width * 2,
+      height: width * 2,
+      onRender,
+    });
 
-      setTimeout(() => {
-        if (canvasRef.current) {
-          canvasRef.current.style.opacity = '1';
-        }
-      });
-
-      return () => globe.destroy();
-    }
+    setTimeout(() => (canvasRef.current!.style.opacity = "1"));
+    return () => globe.destroy();
   }, []);
 
   return (
     <div
       className={cn(
-        'absolute inset-0  mx-auto aspect-[1/1]  h-full overflow-hidden',
+        "absolute inset-0 mx-auto aspect-[1/1] w-full max-w-[600px]",
         className,
       )}
     >
       <canvas
         className={cn(
-          'h-full w-full  opacity-0  transition-opacity duration-500 [contain:layout_paint_size]',
+          "h-full w-full opacity-0 transition-opacity duration-500 [contain:layout_paint_size]",
         )}
         ref={canvasRef}
         onPointerDown={(e) =>

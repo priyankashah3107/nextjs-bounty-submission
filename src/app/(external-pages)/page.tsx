@@ -1,6 +1,7 @@
 import CTA from '@/components/CTA/CTA'
 import FAQ from '@/components/FAQ/FAQ'
-import FeatureCard from '@/components/FeatureCard/FeatureCard'
+import FeatureCrd from '@/components/FeatureCard/FeatureCrd'
+// import FeatureCard from '@/components/FeatureCard/FeatureCard'
 import Home from '@/components/Home/Home'
 import IntegrationSec from '@/components/IntegrationSec/IntegrationSec'
 import LogoScroll from '@/components/LogoScroll/LogoScroll'
@@ -16,6 +17,7 @@ const page = () => {
       <Home />
       <LogoScroll />
       {/* <FeatureCard /> */}
+      <FeatureCrd />
       <Quotetion />
       <IntegrationSec />
       <Testinomial />   

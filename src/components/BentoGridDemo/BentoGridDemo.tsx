@@ -8,7 +8,7 @@ import {
   CommandList,
 } from "@/components/ui/command";
 import { cn } from "@/lib/utils";
-import {AnimatedBeam} from "@/components/magicui/animated-beam";
+import {AnimatedBeamMultipleOutputDemo} from "@/components/example/animated-beam-multiple-outputs";
 import { BentoCard, BentoGrid } from "@/components/magicui/bento-grid";
 import Marquee from "@/components/magicui/marquee";
 import { CalendarIcon, FileTextIcon, InputIcon } from "@radix-ui/react-icons";
@@ -183,10 +183,9 @@ const features = [
     href: "/",
     cta: "Learn more",
     className: "col-span-3 lg:col-span-2",
-    // background: (
-    //   // <AnimatedBeamMultipleOutputDemo className="absolute right-2 top-4 h-[300px] w-[600px] border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-105" />
-
-    // ),
+    background: (
+      <AnimatedBeamMultipleOutputDemo className="absolute right-2 top-4 h-[300px] w-[600px] border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-105" />
+    ),
   },
   {
     Icon: CalendarIcon,
@@ -205,11 +204,13 @@ const features = [
   },
 ];
 
+
+
 export function BentoDemo() {
   return (
     <BentoGrid>
       {features.map((feature, idx) => (
-        <BentoCard  key={idx} {...feature} />
+        <BentoCard key={idx} {...feature} />
       ))}
     </BentoGrid>
   );
