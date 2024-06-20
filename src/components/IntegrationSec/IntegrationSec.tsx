@@ -2,7 +2,7 @@ import React from 'react';
 import DummyInfo from '../DummyInfo/DummyInfo';
 import { OrbitingCirclesDemo } from '../OrbitingCirclesDemo/OrbitingCirclesDemo';
 import { Button } from '../ui/button';
-import { ArrowRight, BoxesIcon, Sparkle } from 'lucide-react';
+import { ArrowRight, BoxesIcon } from 'lucide-react';
 
 const IntegrationSec: React.FC = () => {
   return (
